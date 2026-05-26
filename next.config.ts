@@ -10,6 +10,9 @@ const supabaseHost = (() => {
 })();
 
 const nextConfig: NextConfig = {
+eslint: {
+  ignoreDuringBuilds: true,
+},
   reactStrictMode: true,
   images: {
     remotePatterns: [

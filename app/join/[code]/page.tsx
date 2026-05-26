@@ -10,6 +10,10 @@ import { eq, and } from 'drizzle-orm';
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = { title: 'Join trip' };
 
+export async function generateStaticParams() {
+  return [];
+}
+
 export default async function JoinTripPage({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
   const supabase = await createClient();

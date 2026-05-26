@@ -7,6 +7,7 @@ import { db } from '@/lib/db';
 import { trips, tripMembers } from '@/db/schema';
 import { eq, and } from 'drizzle-orm';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = { title: 'Join trip' };
 
 export default async function JoinTripPage({ params }: { params: Promise<{ code: string }> }) {
